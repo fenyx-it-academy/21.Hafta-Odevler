@@ -2,7 +2,7 @@
 
 *ODEV : ADAM ASMACA*
 
---Sizden KIVY modulunu kullanirak adam asmaca oyununu kodlamanizi istiyoruz.
+--Sizden KIVY modulunu kullanarak adam asmaca oyununu kodlamanizi istiyoruz.
 
 Not1: Oyunda kullanilacak drawing fonksiyonlari bir onceki haftadaki offline ders anlatiminda mevcuttur, yine cizim icin kullanabileceginiz baska fonksiyonlarda mevcut olup arastirarak erisibilirsiniz.
 
