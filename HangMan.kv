@@ -1,0 +1,180 @@
+<But@Button>:
+    color:1,2,2,2
+    font_size: 15
+    size_hint: .2,.1
+<Window_Menu>:
+
+    id:Menu
+    display:Ekran
+    dikkat:Attention
+    resim:Etiket
+
+    canvas.before:
+        Color:
+            rgba: 0,2,0,.9
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    #**************************************
+    StackLayout:
+        orientation: 'tb-lr'
+        padding: 10
+        spacing: 10
+        size_hint:.3,1
+        But:
+            text:"A"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"B"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"C"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"D"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"E"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"F"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"G"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"H"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"I"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"J"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"K"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"L"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"M"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"N"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"O"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"P"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"Q"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"R"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"S"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"T"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"U"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"V"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"W"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"X"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"Y"
+            on_press:Menu.game_start(self.text)
+        But:
+            text:"Z"
+            on_press:Menu.game_start(self.text)
+    #*************************************************************
+    BoxLayout:
+        spacing:10
+        padding:10
+        orientation:"vertical"
+        canvas.before:
+            Color:
+                rgba: 1,0,0,.9
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    #*************************************************************
+        AnchorLayout:
+            spacing:5
+            padding:5
+            orientation:"right"
+            size_hint:1.8,.1
+            Button:
+                size_hint:.1,.5
+                text:"INFO"
+                on_press:info.bilgi(self.text)
+        #*************************************************************
+        Image:
+            id:Etiket
+            canvas.before:
+                Color:
+                    rgba: 1,1,1,1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            source:"C:\\Users\\asime\\Desktop\\Programlama\\PYTON program\\pycharm\\kivy\\stickman\\adam_asmagiris.png"
+            allow_stretch :True
+            keep_ratio : False
+        #*************************************************************
+        BoxLayout:
+            padding:10
+            size_hint:1,.3
+            orientation:"horizontal"
+            canvas.before:
+                Color:
+                    rgba: 0,0,0,.9
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            #*************************************************************
+            TextInput:
+                multiline:False
+                id:Ekran
+                font_size:20
+                text:'                                           WELCOME '
+                readonly:True
+        #*************************************************************
+        TextInput:
+            id:Attention
+            color_font:1,0,0,1
+            text:"PLEASE PRES START TO START  "
+            size_hint:1,.3
+            readonly:True
+        #*************************************************************
+        BoxLayout:
+            spacing:5
+            padding:5
+            orientation:"horizontal"
+            size_hint:1,.2
+            Button:
+                text:"CLEAR"
+                on_press:Menu.clear_game(self.text)
+            Button:
+                text:"START"
+                on_press:Menu.Prepair(self.text)
+            Button:
+                text:"Quit"
+                on_press:Menu.Quit_game(self.text)
+
+
+
+
