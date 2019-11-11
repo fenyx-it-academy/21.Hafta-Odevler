@@ -1,0 +1,151 @@
+<Window>:
+    Oyunalani:
+        name:"hesap-makinesi"
+
+<Button>
+    font_size: 30
+    background_color: 2,1.8,0,1
+    color: 0,0,0,1
+<Oyunalani>:
+    id: oyunid
+    display: tahminalani
+    screen: copadam
+    screen1: yazialani
+    BoxLayout:
+        orientation: "vertical"
+        padding: 5
+        BoxLayout:
+            padding: 3
+            spacing: 3
+            Image:
+                id:copadam
+                canvas.before:
+                    Color:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                source:"copadam\copadam0.png"
+            BoxLayout:
+                orientation: "vertical"
+                size_hint: 1.5,1
+                spacing: 3
+                padding: 3
+                TextInput:
+                    text:"Lutfen ' Yeni Oyun ' butonuna basiniz."
+                    font_size: 20
+                    foreground_color: 1,0,0,1
+                    id: tahminalani
+                BoxLayout:
+                    orientation: "vertical"
+                    Label:
+                        size_hint: 1,0.2
+                        canvas.before:
+                            Color:
+                                rgba:0,.3,0,1
+                            Rectangle:
+                                pos:self.pos
+                                size:self.size
+                        text: "Kelimenizde Olmayan Harfler"
+                    TextInput:
+                        id: yazialani
+                        background_color: 0,.3,0,1
+                        font_size: 25
+                        foreground_color: 1,1,1,1
+        BoxLayout:
+            size_hint: 1,0.7
+            GridLayout:
+                spacing: 1
+                padding: 5
+                rows: 3
+                cols: 9
+                Button:
+                    text: "A"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "B"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "C"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "D"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "E"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "F"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "G"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "H"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "I"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "J"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "K"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "L"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "M"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "N"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "O"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "P"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "Q"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "R"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "S"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "T"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "U"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "V"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "W"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "X"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "Y"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "Z"
+                    on_press: oyunid.tahmin(self.text)
+                Button:
+                    text: "Yeni Oyun"
+                    font_size: 15
+                    background_color: 2,0,0,1
+                    color: 1,1,1,1
+                    on_press: yazialani.text = ""
+                    on_press: oyunid.kelime()
+        TextInput:
+            text:"Aciklama: Oyuna baslamak icin Yeni Oyun butonuna basmalisiniz. Boylelikle kelimeniz belirlenir. Eyer kelimeniz bosluk karakterine sahipse, ekrana gelen sayi bosluk karakterinide icerir. Bosluklar kelimeniz icinde _ ile gosterilir."
+            size_hint: 1,.14
+            background_color: 1,.8,1,10
+            font_size: 14
+            foreground_color: 0,0,0,1
