@@ -1,0 +1,203 @@
+<Manager>:
+    Screen_1:
+        name:"screen1"
+    Screen_2:
+        name:"screen2"
+    feedback:
+        name:"feedback"
+
+<Screen_1>:
+    BoxLayout:
+        orientation:"vertical"
+        spacing:15
+        padding:70
+
+        Label:
+            color:0,0.8,1,1
+            text:"ADAM ASMACA \n   IYI SANSLAR"
+
+
+        Button:
+            background_color:0,0,1,0.7
+            color:0,0.8,1,1
+            text:"Yeni Oyun"
+            size_hint:1,0.1
+            on_press:root.manager.current="screen2"
+
+        Button:
+            color:0,0.8,1,1
+            background_color:0,0,1,0.6
+            text:"Cikis"
+            size_hint:1,0.1
+            on_press:quit()
+
+<Screen_2>:
+    id:screen2
+    BoxLayout:
+        id:"temel"
+        orientation:"vertical"
+        padding:10
+        spacing:8
+        BoxLayout:
+            id:bilgi_copadam
+            orientation:'horizontal'
+            BoxLayout:
+                id:bilgi
+
+                orientation:"vertical"
+                Label:
+                    id:text_1
+                    text:"Kullanilan Harfler:"
+                    size_hint:0.4,0.1
+
+                Label:
+                    id:text_2
+                    text:"Kalan Hak:"
+                    size_hint:0.4,0.1
+
+                Label:
+                    id:text_3
+                    text:"Puan:"
+                    size_hint:0.4,0.1
+
+            Widget:
+                id:"agac"
+                canvas:
+                    Line:
+                        id:"daragaci"
+                        points:250,300,400,300
+                    Line:
+                        id:"daragaci"
+                        points:330,300,330,575
+                    Line:
+                        id:"daragaci"
+                        points:320,565,500,565
+                    Line:
+                        id:"daragaci"
+                        points:500,565,500,536
+                    Line:
+                        id:"daragaci"
+                        points:330,500,365,565
+            Widget:
+                id:"copadam"
+                canvas:
+                    Line:
+                        id:"kafa"
+                        circle:500,500,36
+                    Line:
+                        id:"kafa_2"
+                        points:500,464,500,434
+
+                    Line:
+                        id:"kol_1"
+                        points:500,434,450,405
+                    Line:
+                        id:"kol_2"
+                        points:500,434,550,405
+                    Line:
+                        id:"govde"
+                        points:500,434,500,380
+                    Line:
+                        id:"ayak_1"
+                        points:500,380,550,350
+                    Line:
+                        id:"ayak_2"
+                        points:500,380,450,350
+        Label:
+            id:kelime
+            text:screen2.cizgili
+            font_size:70
+            size_hint:1,0.1
+
+
+        GridLayout:
+            padding:8
+            spacing:3
+            id:"klavye"
+            cols:6
+            size_hint:1,0.4
+
+            Button:
+                text:'A'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'B'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'C'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'D'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'E'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'F'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'G'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'H'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'I'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'J'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'K'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'L'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'M'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'N'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'O'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'P'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'R'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'S'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'T'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'U'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'V'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'Y'
+                on_press:screen2.oyuncalistir(harf=self.text)
+            Button:
+                text:'Z'
+                on_press:screen2.oyuncalistir(harf=self.text)
+
+
+
+        TextInput:
+            id:durum
+            size_hint:1,0.1
+            readonly:True
+            text:screen2.uyari
+
+        Button:
+            id:"yeni_oyun"
+            size_hint:1,0.1
+            text:"Yeni Oyun"
+
+
